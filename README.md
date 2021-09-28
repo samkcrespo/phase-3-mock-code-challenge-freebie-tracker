@@ -6,6 +6,8 @@
 - Connect between tables using Active Record Associations
 - Write class and instance methods using Active Record
 - Use Active Record to query the database
+- Effective Seed Data
+- Debugging
 
 ## Introduction
 
@@ -21,6 +23,8 @@ For our purposes, a `Company` has many `Freebie`s, a `Dev` has many `Freebie`s,
 and a `Freebie` belongs to a `Dev` and to a `Company`.
 
 `Company` - `Dev` is a many to many relationship.
+
+Company => Dev (Need to go through our Freebie(Join))
 
 **Note**: You should draw your domain on paper or on a whiteboard _before you
 start coding_. Remember to identify a single source of truth for your data.
