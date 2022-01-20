@@ -23,9 +23,15 @@ puts "Creating freebies..."
 # * and a freebie belongs to a company.                         *
 # ***************************************************************
 
-Freebie.create(item_name: "Darkwing Duck", value: 50, dev_id: d1.id, company_id: c3.id)
-Freebie.create(item_name: "Flamethrower", value: 400, dev_id: d2.id, company_id: c3.id)
-Freebie.create(item_name: "Arrow to the Knee", value: 1, dev_id: d2.id, company_id: c1.id )
-Freebie.create(item_name: "Pet Rock", value: 999, dev_id: d3.id , company_id: c2.id)
+# Freebie.create(item_name: "Darkwing Duck", value: 50, dev_id: d1.id, company_id: c3.id)
+# Freebie.create(item_name: "Flamethrower", value: 400, dev_id: d2.id, company_id: c3.id)
+# Freebie.create(item_name: "Arrow to the Knee", value: 1, dev_id: d2.id, company_id: c1.id )
+# Freebie.create(item_name: "Pet Rock", value: 999, dev_id: d3.id , company_id: c2.id)
+
+# * REF
+Freebie.create(item_name: "Darkwing Duck", value: 50, dev: d1, company: c3)
+Freebie.create(item_name: "Flamethrower", value: 400, dev: d2, company: c3)
+Freebie.create(item_name: "Arrow to the Knee", value: 1, dev: d2, company: c1 )
+Freebie.create(item_name: "Pet Rock", value: 999, dev: d3 , company: c2)
 
 puts "Seeding done!"

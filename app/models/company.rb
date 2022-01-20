@@ -5,7 +5,8 @@ class Company < ActiveRecord::Base
   def give_freebie(dev, item_name, value)
     # creates a new Freebie instance associated with this company and the given dev
     # ! All the same
-    Freebie.create(item_name: item_name, value: value, company_id: self.id, dev_id: dev.id)
+    # Freebie.create(item_name: item_name, value: value, company_id: self.id, dev_id: dev.id)
+    Freebie.create(item_name: item_name, value: value, company: self, dev: dev)
 
     # ? Phil's choice
     # self.freebies.create(item_name: item_name, value: value, dev_id: dev.id)
@@ -18,7 +19,7 @@ class Company < ActiveRecord::Base
   def self.oldest_company
     # SELECT "companies".* FROM "companies" ORDER BY "companies"."founding_year" ASC, LIMIT 1
     # ! BEST SQL OPTION
-    self.all.order(:founding_year).first
+    self.order(:founding_year).first
     # Company.all.order(:founding_year).first
     # Company.order(:founding_year).first
 

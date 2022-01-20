@@ -27,7 +27,9 @@ class Dev < ActiveRecord::Base
     if self.received_one?(freebie.item_name)
       # freebie.dev_id = dev.id
       # freebie.save
-      freebie.update(dev_id: dev.id)
+      # freebie.update(dev_id: dev.id)
+      # * REF
+      freebie.update(dev: dev)
       puts "Successful!"
     else 
       puts "you don't own that, broh"

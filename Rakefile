@@ -18,3 +18,21 @@ task :c do
   puts "*" * cols
   Pry.start
 end
+
+desc "Testing"
+task :test do
+  d1 = Dev.first
+  d2 = Dev.second
+  c1 = Company.first
+  c2 = Company.second
+  f1 = Freebie.first
+
+
+  p d1.freebies
+  p c1.freebies
+  p f1.company
+  p f1.dev
+
+  p f1.print_details
+
+end

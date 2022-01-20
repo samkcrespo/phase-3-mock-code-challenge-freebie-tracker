@@ -26,6 +26,8 @@ ActiveRecord::Schema.define(version: 2022_01_20_191328) do
     t.integer "value"
     t.integer "dev_id"
     t.integer "company_id"
+    t.index ["company_id"], name: "index_freebies_on_company_id"
+    t.index ["dev_id"], name: "index_freebies_on_dev_id"
   end
 
 end
