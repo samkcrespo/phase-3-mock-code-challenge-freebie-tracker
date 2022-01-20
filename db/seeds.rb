@@ -22,13 +22,5 @@ puts "Creating freebies..."
 # * TODO: create freebies! Remember, a freebie belongs to a dev *
 # * and a freebie belongs to a company.                         *
 # ***************************************************************
-# Create freebies Here
-# DO NOT HARDCODE YOUR SEED RELATIONSHIPS
-# Freebie.create(item_name: "Pizza", value: 42, company: c1, dev: d1) <= with relationship macros
-Freebie.create(item_name: "Pizza", value: 42, company_id: c1.id, dev_id: d1.id )
-Freebie.create(item_name: "Burgers", value: 15, company_id: c2.id, dev_id: d2.id )
-Freebie.create(item_name: "Job", value: 99999, company_id: c1.id, dev_id: d2.id )
-Freebie.create(item_name: "Water Bottle", value: 10, company_id: c3.id, dev_id: d3.id )
-Freebie.create(item_name: "Pen", value: 1, company_id: c4.id, dev_id: d1.id )
 
 puts "Seeding done!"
