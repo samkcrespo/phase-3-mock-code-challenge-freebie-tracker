@@ -1,2 +1,2 @@
 class Freebie < ActiveRecord::Base
-\end
+end
