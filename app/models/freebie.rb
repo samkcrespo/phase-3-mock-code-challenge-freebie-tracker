@@ -8,7 +8,7 @@ class Freebie < ActiveRecord::Base
   #   self.dev
   # end
 
-  def print_details
-    "#{dev.name} owns a #{item_name} from #{company.name}"
-  end
+  # def print_details
+  #   "#{dev.name} owns a #{item_name} from #{company.name}"
+  # end
 end
