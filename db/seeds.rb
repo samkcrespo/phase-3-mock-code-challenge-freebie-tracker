@@ -23,4 +23,28 @@ puts "Creating freebies..."
 # * and a freebie belongs to a company.                         *
 # ***************************************************************
 
+# Freebie.create(item_name: 'Pop-Socket', value: 12, company_id: c1.id, dev_id: d2.id)
+# Freebie.create(item_name: 'T-Shirt', value: 25, company_id: c2.id, dev_id: d2.id)
+# Freebie.create(item_name: 'Sound Bar', value: 300, company_id: c3.id, dev_id: d1.id)
+# Freebie.create(item_name: 'Pizza', value: 15, company_id: c1.id, dev_id: d3.id)
+# Freebie.create(item_name: 'Tablet', value: 250, company_id: c4.id, dev_id: d1.id)
+# Freebie.create(item_name: 'Pens', value: 10, company_id: c3.id, dev_id: d4.id)
+# Freebie.create(item_name: 'Phone Case', value: 22, company_id: c2.id, dev_id: d4.id)
+# Freebie.create(item_name: 'Hat', value: 20, company_id: c4.id, dev_id: d3.id)
+# Freebie.create(item_name: 'Computer', value: 12, company_id: c1.id, dev_id: d1.id)
+# Freebie.create(item_name: 'Shirt', value: 30, company_id: c4.id, dev_id: d2.id)
+
+counter = 1
+
+10.times do
+  counter += 1
+Freebie.create(
+  dev: Dev.all.sample, 
+  company: Company.all.sample, 
+  value: rand(1..150), 
+  item_name: "item #{counter}"
+)
+end
+
+
 puts "Seeding done!"
